@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Print-in - Jasa Print</title>
+</head>
+<link rel="stylesheet" type="text/css" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style type="text/css">
+	body{
+		background-color: white;
+		overflow: hidden;
+		height: 768px;
+	}
+	.not{
+		font-size: 16px;
+		padding: 0 5px; 
+		text-align: left;
+	}
+	.not p, .not h5{
+		margin: 0
+	}
+	.tombol{border-top:2px solid black;margin-top:-2px;}
+	a{text-decoration: none;color: white}
+	.tom{
+		width: 50%;
+		border-right: 2px solid black;
+		border-bottom: 2px solid black;
+		margin-right: -2px; 
+		padding-top: 2px;
+	}
+	.chat:hover{
+		cursor: pointer;
+		background-color: grey;
+	}
+	.kanan{
+		margin: -768px 0 0 260px;
+		background-color: white;
+		display: none;
+		height: 728px;
+	}
+	input{
+		width: 880px;
+		margin: 6px 0 0 20px;
+	}
+	.fa{
+		font-size: 36px;
+		cursor: pointer;
+		margin: 5px 0 -10px 5px;
+	}
+	.fa:hover{
+		color: white;
+	}
+</style>
+<body>
+	<div style="display: flex;">
+		<div class="kiri">
+			<img src="Logo1.png">
+			<div class="tombol not">
+				<h5>Vincent Oktavian</h5>
+				<p>Jln. Raya No. 1, Pontianak, Kalbar</p>
+				<p>No HP:08xx xxxx xxxx</p>
+			</div>
+			<div class="tombol not">
+				<h5>Kim Dahyun</h5>
+				<p>Jln. Jalan No. 9, Pontianak, Kalbar</p>
+				<p>No HP:08xx xxxx xxxx</p>
+			</div>
+			<div style="display: flex;height:50px">
+				<div class="tom">Rp 5.000</div>
+				<div class="tom chat" onclick="chit()">Chat</div>
+			</div>
+			<div class="tombol not">
+				<p>Waktu kadarluarsa: <b>5 menit</b></p>
+				<p>Jenis kertas: <b>A4</b></p>
+				<p>Orientasi: <b>Portrait</b></p>
+				<p>Jumlah Salinan:<b>0</b></p>
+				<p>Jilid: <b>Ya</b></p>
+			</div>
+			<a href="lohome.html" style="color: red;">Batal</a>
+		</div>
+		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d127674.16212503688!2d109.26150939040959!3d-0.035223154242285955!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e1d58f604b0799b%3A0x511ef9501fc9ffe3!2sPontianak%2C%20Kota%20Pontianak%2C%20Kalimantan%20Barat!5e0!3m2!1sid!2sid!4v1584264244771!5m2!1sid!2sid" width="1066" height="768" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+	</div>
+	<div class="kanan">
+		<div class="percakapan">
+			<div class="pengirim" style="width: 210px">Sesuai aplikasi ya?</div>
+			<div class="penerima" style="margin-top: 50px;width: 50px">Iya</div>
+		</div>
+		<div style="width:1068px;margin-left:22px;height:55px;background-color:lightgrey;bottom:0;position: absolute;display: flex;">
+			<input type="text" placeholder="Masukkan teks disini">
+			<div style="padding: 2px;"><i class="fa fa-image"></i></div>
+			<div style="padding: 2px;"><i class="fa fa-send-o"></i></div>
+		</div>
+	</div>
+	<script>
+			var x=0;
+		function chit(){
+			if (x==0) {
+				document.querySelector('.kanan').style.display = 'block';
+				document.querySelector('iframe').style.display = 'none';
+				document.querySelector('.chat').innerHTML = 'Kembali';
+				x=1;
+			}else{
+				document.querySelector('.kanan').style.display = 'none';
+				document.querySelector('iframe').style.display = 'block';
+				document.querySelector('.chat').innerHTML = 'Chat';
+				x=0;
+			}
+		}
+	</script>
+</body>
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Print-in - Print</title>
+</head>
+<link rel="stylesheet" type="text/css" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style type="text/css">
+	body{
+		background-color: white;
+		overflow: hidden;
+		height: 768px;
+	}
+	.kiri{
+		padding: 10px;
+	}
+	a{text-decoration:none;}
+	p{font-size: 14px;text-align: left;margin: 10px 0 0 5px;}
+	input{margin: 0}
+</style>
+<body>
+	<div style="display: flex;">
+		<div class="kiri">
+			<p>Lokasi anda:</p>
+			<input type="" name="">
+			<p>Deadline (menit):</p>
+			<input type="number" name="" placeholder="Minimal 2 menit">
+			<div style="display: flex;">
+				<div>
+					<p>Metode Pembayaran</p>
+					<div style="display: flex;margin-left:5px;">
+						<input type="radio" name="pay" style="margin:0;width: 14px;"><p style="margin-top: 0;">Go-Pay</p>
+					</div>
+					<div style="display: flex;margin-left:5px;">
+						<input type="radio" name="pay" style="margin:0;width:14px;"><p style="margin-top: 0;">Transfer</p>
+					</div>
+				</div>
+				<input type="file" style="height: 50px;margin: 20px 0 0 50px;border:0px;padding: 0;width: 95px;">
+			</div>
+			<p>Salinan:</p>
+			<input type="number" name="" placeholder="0">
+			<p>Jenis Kertas:</p>
+			<div style="display: flex;">
+				<div>
+					<div style="display: flex;margin-left:5px;">
+						<input type="radio" name="kertas" style="margin:0;width: 14px;"><p style="margin-top: 0;">A3</p>
+					</div>
+					<div style="display: flex;margin-left:5px;">
+						<input type="radio" name="kertas" style="margin:0;width:14px;"><p style="margin-top: 0;">A4</p>
+					</div>
+					<div style="display: flex;margin-left:5px;">
+						<input type="radio" name="kertas" style="margin:0;width: 14px;"><p style="margin-top: 0;">F4</p>
+					</div>
+					<div style="display: flex;margin-left:5px;">
+						<input type="radio" name="kertas" style="margin:0;width:14px;"><p style="margin-top: 0;">B5</p>
+					</div>
+				</div>
+				<div>
+					<div style="display: flex;margin-left:5px;">
+						<input type="radio" name="kertas" style="margin:0;width: 14px;"><p style="margin-top: 0;">A5</p>
+					</div>
+					<div style="display: flex;margin-left:5px;">
+						<input type="radio" name="kertas" style="margin:0;width:14px;"><p style="margin-top: 0;">Tabloid</p>
+					</div>
+				</div>
+			</div>
+			<p>Orientasi Kertas</p>
+			<div style="display: flex;margin-left:5px;">
+				<input type="radio" name="orientasi" style="margin:0;width: 14px;"><p style="margin-top: 0;">Portrait/Berdiri</p>
+			</div>
+			<div style="display: flex;margin-left:5px;">
+				<input type="radio" name="orientasi" style="margin:0;width:14px;"><p style="margin-top: 0;">Landscape/Melebar</p>
+			</div>
+			<p>Jilid?</p>
+			<div style="display: flex;margin-left:5px;">
+				<input type="radio" name="jilid" style="margin:0;width: 14px;"><p style="margin-top: 0;">Ya</p>
+			</div>
+			<div style="display: flex;margin-left:5px;">
+				<input type="radio" name="jilid" style="margin:0;width:14px;"><p style="margin-top: 0;">Tidak</p>
+			</div>
+			<a href="loprint.html"><div class="tombol-besar" style="width:250px;margin-left:20px;">PESAN</div></a>
+		</div>
+		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d127674.16212503688!2d109.26150939040959!3d-0.035223154242285955!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e1d58f604b0799b%3A0x511ef9501fc9ffe3!2sPontianak%2C%20Kota%20Pontianak%2C%20Kalimantan%20Barat!5e0!3m2!1sid!2sid!4v1584264244771!5m2!1sid!2sid" width="1066" height="768" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+	</div>
+	<script>
+			var x=0;
+		function chit(){
+			if (x==0) {
+				document.querySelector('.kanan').style.display = 'block';
+				document.querySelector('iframe').style.display = 'none';
+				document.querySelector('.chat').innerHTML = 'Kembali';
+				x=1;
+			}else{
+				document.querySelector('.kanan').style.display = 'none';
+				document.querySelector('iframe').style.display = 'block';
+				document.querySelector('.chat').innerHTML = 'Chat';
+				x=0;
+			}
+		}
+	</script>
+</body>
+</html>
