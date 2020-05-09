@@ -39,14 +39,8 @@
 				<input type="text" name="name" placeholder="Nama">
 				<input type="text" name="email" placeholder="Email">
 				<input type="password" name="password" placeholder="Password">
-				<input type="text" name="number" placeholder="Nomor HP">
 			</div>
-			<div>
-				<p style="margin: 5px 0 -10px 0">Jenis Kelamin:</p>
-				<input type="radio" style="width: 20px;margin-bottom: 5px;float: left;" name="gender"><p style="float: left;">Laki-laki</p>
-				<input type="radio" style="width: 20px;margin-bottom: 5px;float: left;" name="gender"><p style="float: left;">Perempuan</p>
-			</div>
-			<input type="submit" name="tombol" class="tombol-besar" value="Daftar">
+			<input type="submit" name="tombol" class="tombol-besar" value="Daftar" style="margin-top: 20px; width: 98%;">
 		</form>
 		<?php
 			if(isset($_POST['tombol'])){
